@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>README Maker</title>
+</head>
+<body>
+    <form id="readme-form" method="POST">
+        <label for="title">Enter your project title</label>
+        <input type="text" id="title" name="title" required><br>
+    
+        <label for="tech">Enter the programming languages or technologies used</label>
+        <input type="text" id="tech" name="tech" required><br>
+    
+        <label for="libs">Enter the required libraries</label>
+        <input type="text" id="libs" name="libs" required><br>
+    
+        <label for="desc">Enter brief description of the project</label>
+        <textarea id="desc" name="desc" required></textarea><br>
+    
+        <label for="lic">Enter the License (N/A if not applicable)</label>
+        <input type="text" id="lic" name="lic" required><br>
+    
+        <button type="submit">Generate</button>
+    </form>    
+
+    {% if response is not none %}
+    <h3>Response:</h3>
+    <textarea id="responseText" readonly>{{ response }}</textarea>
+    {% endif %}
+</body>
+</html>
