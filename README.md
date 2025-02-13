@@ -48,7 +48,7 @@ Then run the `pip install` command above.
 2.  (Optional) Create a `.env` file in the root directory to store your Gemini API key (strongly recommended for security):
 
     ```
-    GOOGLE_API_KEY=<YOUR_GEMINI_API_KEY>
+    GOOGLE_API=<YOUR_GEMINI_API_KEY>
     ```
 
     Make sure to replace `<YOUR_GEMINI_API_KEY>` with your actual Gemini API key.  If you do not use a `.env` file, you will need to hardcode the API key into your Python script (not recommended).
