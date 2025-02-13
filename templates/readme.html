@@ -3,31 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles.css">
     <title>README Maker</title>
 </head>
 <body>
-    <form id="readme-form" method="POST">
-        <label for="title">Enter your project title</label>
-        <input type="text" id="title" name="title" required><br>
-    
-        <label for="tech">Enter the programming languages or technologies used</label>
-        <input type="text" id="tech" name="tech" required><br>
-    
-        <label for="libs">Enter the required libraries</label>
-        <input type="text" id="libs" name="libs" required><br>
-    
-        <label for="desc">Enter brief description of the project</label>
-        <textarea id="desc" name="desc" required></textarea><br>
-    
-        <label for="lic">Enter the License (N/A if not applicable)</label>
-        <input type="text" id="lic" name="lic" required><br>
-    
-        <button type="submit">Generate</button>
-    </form>    
-
-    {% if response is not none %}
-    <h3>Response:</h3>
-    <textarea id="responseText" readonly>{{ response }}</textarea>
-    {% endif %}
+    <main>
+        <header>
+            <h1>Project Details</h1>
+        </header>
+        <div class="container">
+            <form id="readme-form" method="POST">
+                <table>
+                    <tr>
+                        <td><label for="title">Enter your project title</label></td>
+                        <td><input type="text" id="title" name="title" class="large-input" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="tech">Enter the programming languages or technologies used</label></td>
+                        <td><input type="text" id="tech" name="tech" class="large-input" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="libs">Enter the required libraries</label></td>
+                        <td><input type="text" id="libs" name="libs" class="large-input" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="desc">Enter brief description of the project</label></td>
+                        <td><textarea id="desc" name="desc" class="large-input" required></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><label for="lic">Enter the License (N/A if not applicable)</label></td>
+                        <td><input type="text" id="lic" name="lic" class="large-input" required></td>
+                    </tr>
+                </table><br>
+                <button type="submit">Generate</button>
+            </form>
+        </div>
+        {% if response is not none %}
+        <h2>Response:</h2>
+        <textarea id="responseText" readonly>{{ response }}</textarea>
+        {% endif %}
+    </main>
 </body>
 </html>
