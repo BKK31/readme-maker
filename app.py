@@ -18,7 +18,7 @@ def generate_readme(title, tech, libs, desc, lic):
         2. About the project
         3. Technologies Used
         4. Getting started:
-            - Prerequisites (Instructions to install required packages here)
+            - Prerequisites (Instructions to install required packages here in a single command)
             - Installation (Instructions to clone the GitHub repo)
             - Usage (Show examples of how it can be used)
         5. License (Provide the details of the license used)
